@@ -81,10 +81,10 @@ analytics:
 # Site Author
 author:
   name             : "Gord Burtch"
-  avatar           : "gburtch.png"
+  avatar           : "images/gburtch.png"
   bio              : "Your biography for the left-hand sidebar"
-  location         : "Minneapolis, MN"
-  employer         : "Boston University - Questrom School of Business"
+  location         : "Boston, MA"
+  employer         : "Questrom School of Business"
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=rc64wHQAAAAJ&hl=en"
   email            : "gburtch@bu.edu"
