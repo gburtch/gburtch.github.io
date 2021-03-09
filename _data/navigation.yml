@@ -1,10 +1,7 @@
 # main links links
 main:
-  - title: "Blog Posts"
+  - title: "Posts"
     url: /year-archive/
 
   - title: "CV"
     url: /cv/
-
-  - title: "Portfolio"
-    url: /portfolio/
