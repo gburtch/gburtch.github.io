@@ -102,7 +102,6 @@ for (r in 1:sims){
       logit_mod_ipp <- glm(data=df_tmp,Y ~ Treat_center + factor(id), family = "binomial")
       
       # Sometimes the analytical correction fails, and it doesn't handle it well.
-      # Note: usually when bife fails, clogit will also fail to converge and reports NA.
       tryCatch(
         {
           # Let's set a placeholder result to NA in case the estimation fails.
@@ -139,7 +138,9 @@ for (r in 1:sims){
 Let's take a quick look at the outpout from the final set of regressions, in the last iteration. Note that I am omitting the intercept and dummy coefficients in the output.
 
 ```{r regs,tidy=TRUE}
-screenreg(list(logit_mod_omit,logit_mod_ipp,logit_mod_bife,logit_mod_fe,logit_mod_control),digits=3,omit.coef=c("factor|Intercept|confound"),custom.model.names=c("logit","logit + dummies","bife","clogit","logit + control"))
+screenreg(list(logit_mod_omit,logit_mod_ipp,logit_mod_bife,logit_mod_fe,logit_mod_control),
+          digits=3,omit.coef=c("factor|Intercept|confound"),
+          custom.model.names=c("logit","logit + dummies","bife","clogit","logit + control"))
 
 ```
 
