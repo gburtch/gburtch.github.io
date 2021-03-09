@@ -6,12 +6,11 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-theme                    : minima
 locale                   : "en-US"
 title                    :
 title_separator          :
 name                     : &name "Gord Burtch"
-description              : &description "Associate Professor, BU Questrom"
+description              : &description "I research platforms, crowds and causal inference methods."
 url                      : https://gburtch.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "gburtch/gburtch.github.io"
@@ -85,9 +84,9 @@ author:
   avatar           : "profile.png"
   bio              : "I research platforms, crowds and causal inference methods."
   location         : "Boston, MA"
-  employer         : "Questrom School of Business"
+  employer         : "Boston University"
   pubmed           :
-  googlescholar    : "https://scholar.google.com/citations?user=rc64wHQAAAAJ&hl=en"
+  googlescholar    : "https://scholar.google.com/citations?user=rc64wHQAAAAJ"
   email            : "gburtch@bu.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -104,10 +103,10 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : "https://orcid.org/0000-0001-9798-1113"
+  orcid            :
   pinterest        :
   soundcloud       :
-  stackoverflow    : "13403806/gord-b"
+  stackoverflow    : https://stackoverflow.com/users/13403806/gord-b
   steam            :
   tumblr           :
   twitter          : "gburtch"
