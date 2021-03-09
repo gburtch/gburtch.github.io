@@ -10,6 +10,7 @@ author: "steve"
 date: '2021-03-08'
 excerpt: "Here is a simulation-based demonstration of the incidental parameters problem with logistic regression."
 layout: post
+permalink: /posts/2021/03/logit-ipp/
 tags:
   - econometrics
   - logistic
