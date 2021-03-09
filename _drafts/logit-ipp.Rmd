@@ -54,10 +54,10 @@ The simulation setup is as follows. I begin with 25 panel unit and simulate a ti
 
 ```{r simulation_setup, message=FALSE,tidy=TRUE}
 # I begin by setting some simulation parameters.
-set.seed(12345)
+set.seed(2040)
 n <- 100
 sims <- 100
-panel_max <- 15
+panel_max <- 10
 
 # Lastly, for each panel unit
 confound <- rnorm(n, mean = 0, sd=1)
