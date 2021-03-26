@@ -114,12 +114,10 @@ I was then able to locate data for most of the control covariates the
 authors mentioned in their paper, by scouring different German Census
 Data portals (not a fun exercise when you cannot speak German!). In
 particular, I located data on the number of physicians per capita in
-each district, number of pharmacies, number of hospital beds, as well as
-demographics on resident volumes by age category, gender and so on, from
-two sources.
+each district, number of pharmacies, number of hospital beds, as well as data 
+on resident volumes by age category, gender and so on.
 
-Many, if not most of the covariates are available from the Germany
-Census data portal
+Many, if not most of the covariates are available from
 [DEStatis](https://www.destatis.de/EN/Themes/Countries-Regions/Regional-Statistics/_node.html "DEStatis"),
 including population counts by age range, as well as by gender. Further,
 data on a region’s local healthcare infrastructure, including physicians
