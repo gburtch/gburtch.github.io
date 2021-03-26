@@ -26,56 +26,38 @@ Note: all replication materials are posted in this GitHub [repository.](https://
 The Synthetic Control Method (SCM for short) was introduced by Abadie,
 Diamond and Hainmueller, in a 2010 paper that was published in
 [JASA](https://amstat.tandfonline.com/doi/abs/10.1198/jasa.2009.ap08746#.YF0CFkhKj6A "JASA").
-Once again, I won’t rehash the details of the theory here, but I’ll give
-you the basic idea:
+I’ll try to summarize basic idea behind the method.
 
-As researchers, we sometimes encounter situations that can loosely be
-characterized as follows: 1) We have 1 (or very few) treated panels; 2)
-Despite having numerous untreated panels, that have the potential to act
-as control / counterfactual, none of them are immediately useful,
-because they exhibit markedly different pre-trends; 3) Whatever
-transformations you implement, or controls you condition upon, you are
-unable to resolve the problem.
+As a researcher (or more commonly, as a policy analyst), we sometimes 
+encounter situations in which we have 1 (or very few) treated panels, and the available
+control panels are not immediately useful. The treated panel is just 'too different'. This
+might be apparent, for example, from an inspection of pre-trends in the outcome variable.  
 
-One possible solution we might jump to is matching. However, perhaps you
-simply cannot identify reliable / quality matches for the treatment in
-your data. An alternative approach is to try re-weighting the available
-observations. This, essentially, is what SCM implements. It identifies a
-linear, weighted combination of control unit outcomes that maps control
-unit outcomes to those observed for the treated unit, when the treatment
+If all of the available control panels are too different, matching can't resolve this. 
+A related, alternative approach would be re-weighting (e.g., IPW). This, essentially, 
+is what SCM implements. It identifies a linear, weighted combination that maps control
+unit outcomes to outcomes in the treated unit, when the treatment
 is not active (i.e., in the pre-treatment period).
 
-There are other ways we can think about what SCM try to accomplish,
-which may be more intuitive for some. Most simply, we can think about
-this “mapping” excercise as a prediction problem. Viewed this way,
-difference-in-differences is just a relatively inflexible approach for
-learning that relationship (i.e., it’s a shitty prediction algorithm).
-This means that a parallel trend violation basically implies that
-difference-in-differences is not a suitable way of representing the
-mapping we care about. We sometimes try to make diff-in-diff more
-flexible by transforming the dependent variable (e.g., the log),
-accommodating differential trends, or conditioning on other time-varying
-covariates. However, whatever we do, sometimes those approaches just
-aren’t flexible enough. What SCM does is allow for greater flexibility
-(i.e., its a somewhat better prediction method). It accomplishes this by
+What is this exercise really doing then? Simply put, we can think about
+this “mapping” exercise as a prediction problem (note: viewed this way,
+we might think of difference-in-differences as an inflexible approach to
+capturing / representing the mapping between treatment and control panels, 
+i.e., it’s a shitty prediction algorithm, and a parallel trend violation amounts to 
+prediction error). What SCM does is allow for greater flexibility
+in the mapping between treatment and control. It accomplishes this by
 allowing for a fractional representation of individual panels when it
-learns the mapping.
+learns the mapping, via re-weighting.
 
 Assuming we can learn how to use the control panels’ outcomes to predict
 the treatment panel outcome before treatment turns on, we can apply that
-learned predcition into the post period, to predict what *would* have
-happened to the treatment outcome, had the treatment never been turned
-on (or so the logic goes). Not that this is basically the exact same
-logic we apply with diff-in-diff; we are assuming that the control panel
-outcomes, plus covariates, plus panel fixed effects and time period
-fixed effects, suck out all the variation (aside from treatment) that
-drives differences between our treatment and control groups. Anything
-that is left over when we remove those pieces has to be attributable to
-the treatment turning on.
-
-I am sure there are some nuances here that my explanation above glosses
-over (e.g., the weights we learn under SCM are constrained to be
-non-negative, for example), so I encourage you to go read the original
+learned prediction into the post period, to speculate about what *would* have
+happened to the treated panel had the treatment never turned
+on. Of course, there are some nuances here that I am glossing over. For example, 
+the weights we learn under SCM are constrained to be
+non-negative, selected controls need to lie in the convex hull of the treated panel, 
+i.e., control panels cannot be 'too different' from the treated panel.
+As I've stated previously, I encourage you to go read the original
 paper, as well as subsequent innovations, e.g., [synthetic difference in
 differences](https://www.nber.org/papers/w25532 "synthetic difference in differences"),
 [generalized synthetic
@@ -83,18 +65,17 @@ control](https://www.cambridge.org/core/journals/political-analysis/article/gene
 and synthetic control using LASSO, or
 [SCUL](https://hollina.github.io/scul/ "SCUL").
 
-What I am going to do here is provide a quick demonstration of the
-method, via a replication of some recently published work. At the same
-time, I’ll demonstrate the SCM-using-LASSO variant as well, to
-demonstrate its value in this situation, where the number of available
-controls is quite large.
+I am going to provide a quick demonstration of the
+SCM, via a replication of some recently published work in PNAS. At the same
+time, I’ll demonstrate SCM using LASSO as well, given the number of available
+controls is quite large in this case.
 
 ## Replicating Mitze et al (2020, PNAS)
 
 Mitze et al. (2020, PNAS) examine a case study in Germany around the
-mandatory imposition of facemasks in Jena, Germany, on April 6th of
+mandatory imposition of face masks in Jena, Germany, on April 6th of
 2020. They employed this policy event as something of a natural
-experiment, to estimate the effect of mandatory facemask policies on
+experiment, to estimate the effect of mandatory face mask policies on
 COVID-19 case rates. Interestingly, this setup is also something of an
 ideal use case for SCM; we have a single treated location (the unit of
 analysis here is a district), and many controls (hundreds of other,
@@ -116,7 +97,7 @@ requires authors to disclose data and analysis scripts as supplementary
 appendices. Unfortunately, in this case, I was unable to locate anything
 approximating useful replication materials. The supplementary appendix
 did not include any analysis scripts (despite the authors’ claim to the
-contrary in their paper), and the \`data’ that was provided amounted to
+contrary in their paper), and the `data’ that was provided amounted to
 a single spreadsheet, with a handful of time series (certainly not the
 entirety of raw data that was used to construct a synthetic control).
 Rather than give up, I decided to locate the datasets the authors had
