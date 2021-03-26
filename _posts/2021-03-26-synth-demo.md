@@ -73,8 +73,8 @@ controls is quite large in this case.
 ## Replicating Mitze et al (2020, PNAS)
 
 Mitze et al. (2020, PNAS) examine a case study in Germany around the
-mandatory imposition of face masks in Jena, Germany, on April 6th of
-2020. They employed this policy event as something of a natural
+mandatory imposition of face masks in Jena, Germany, on April 6th of 2020. 
+They employed this policy event as a natural
 experiment, to estimate the effect of mandatory face mask policies on
 COVID-19 case rates. Interestingly, this setup is also something of an
 ideal use case for SCM; we have a single treated location (the unit of
