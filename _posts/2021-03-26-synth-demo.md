@@ -18,6 +18,8 @@ namely:
     considerably reduce COVID-19 cases in Germany.](https://www.pnas.org/content/117/51/32293 "Face masks
     considerably reduce COVID-19 cases in Germany.") Proceedings of the
     National Academy of Sciences, 117(51), 32293-32301.
+   
+Note: all replication materials are posted in this GitHub [repository.](https://github.com/gburtch/scm_replication "repository.") 
 
 ## Some Intuition for Synth Control
 
