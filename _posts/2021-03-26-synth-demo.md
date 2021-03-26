@@ -101,7 +101,7 @@ figure, which depicts the actual cumulative covid case series in Jena
 This is the result we are going to try to reproduce.
 
 <figure>
-<https://gburtch.github.io/images/SCM-replication_files/figure-gfm/authors_figure.png">
+<img src ="https://gburtch.github.io/images/SCM-replication_files/figure-gfm/authors_figure.png">
 </figure>
 
 # Data / Measures
