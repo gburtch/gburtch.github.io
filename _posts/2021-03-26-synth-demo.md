@@ -26,7 +26,7 @@ Note: all replication materials are posted in this GitHub [repository.](https://
 The Synthetic Control Method (SCM for short) was introduced by Abadie,
 Diamond and Hainmueller, in a 2010 paper that was published in
 [JASA](https://amstat.tandfonline.com/doi/abs/10.1198/jasa.2009.ap08746#.YF0CFkhKj6A "JASA").
-I’ll try to summarize the basic idea behind the method.
+I’ll first provide some basic intuition for the method, before I get into the application.
 
 As a researcher (or more commonly, as a policy analyst), we sometimes 
 encounter situations in which we have 1 (or very few) treated panels, and the available
