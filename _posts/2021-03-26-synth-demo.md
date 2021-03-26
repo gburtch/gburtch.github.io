@@ -101,7 +101,7 @@ figure, which depicts the actual cumulative covid case series in Jena
 This is the result we are going to try to reproduce.
 
 <figure>
-<img src="../images/authors_figure.png" style="width:50.0\%" alt="Figure 1. Plot of Mitze et al SCM Result" /><figcaption aria-hidden="true">Figure 1. Plot of Mitze et al SCM Result</figcaption>
+<img src="../images/authors_figure.png" style="width:50.0%" alt="Figure 1. Plot of Mitze et al SCM Result" /><figcaption aria-hidden="true">Figure 1. Plot of Mitze et al SCM Result</figcaption>
 </figure>
 
 # Data / Measures
