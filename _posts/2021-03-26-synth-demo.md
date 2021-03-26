@@ -101,7 +101,7 @@ figure, which depicts the actual cumulative covid case series in Jena
 This is the result we are going to try to reproduce.
 
 <figure>
-<img src="../images/authors_figure.png" style="width:50.0%" alt="Figure 1. Plot of Mitze et al SCM Result" /><figcaption aria-hidden="true">Figure 1. Plot of Mitze et al SCM Result</figcaption>
+<img src="../images/authors_figure.png">
 </figure>
 
 # Data / Measures
@@ -240,7 +240,7 @@ ggplot(data=covid,aes(x=date,y=log(cum_cases+1),color=factor(treat),group=dist_i
 We can see the treated district, Jena, in blue, right in the middle.
 
 <figure>
-<img src="https://gburtch.github.io/images/SCM-replication_files/figure-gfm/Visualizing the Series-1" >
+<img src="https://gburtch.github.io/images/SCM-replication_files/figure-gfm/Visualizing the Series-1.png" >
 </figure>
 
 We can also visualize these locations, so we have a sense of where Jena
