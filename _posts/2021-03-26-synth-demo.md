@@ -14,8 +14,9 @@ to report a simple replication of the basic results in a recently
 published paper, in the Proceedings of the National Academy of Sciences,
 namely:
 
--   Mitze, T., Kosfeld, R., Rode, J., & Wälde, K. (2020). Face masks
-    considerably reduce COVID-19 cases in Germany. Proceedings of the
+-   Mitze, T., Kosfeld, R., Rode, J., & Wälde, K. (2020). [Face masks
+    considerably reduce COVID-19 cases in Germany.](https://www.pnas.org/content/117/51/32293 "Face masks
+    considerably reduce COVID-19 cases in Germany.") Proceedings of the
     National Academy of Sciences, 117(51), 32293-32301.
 
 ## Some Intuition for Synth Control
