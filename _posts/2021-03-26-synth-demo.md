@@ -91,7 +91,7 @@ controls is quite large.
 
 ## Replicating Mitze et al (2020, PNAS)
 
-Mitzen et al. (2020, PNAS) examine a case study in Germany around the
+Mitze et al. (2020, PNAS) examine a case study in Germany around the
 mandatory imposition of facemasks in Jena, Germany, on April 6th of
 2020. They employed this policy event as something of a natural
 experiment, to estimate the effect of mandatory facemask policies on
@@ -109,7 +109,7 @@ This is the result we are going to try to reproduce.
 
 # Data / Measures
 
-Now, I originally sought to replicate this study becasue I needed a
+Now, I originally sought to replicate this study because I needed a
 teaching example for my graduate-level causal inference course. The
 study seemed like a wonderful candidate for replication, because PNAS
 requires authors to disclose data and analysis scripts as supplementary
