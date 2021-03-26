@@ -1,6 +1,6 @@
 ---
 title: Demo of Synthetic Control Method (a Replication)
-date: '2021-03-26'
+date: '2021-03-25'
 permalink: /posts/2021/03/synth-demo/
 tags:
   - econometrics
