@@ -1,20 +1,11 @@
 ---
 title: Demo of Synthetic Control Method (a Replication)
-output:
-  md_document:
-    variant: gfm
-    preserve_yaml: TRUE
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../_posts") })
-author: "Gord Burtch"
-date: '2021-03-25'
-excerpt: "A replication of the basic findings in Mitze et al. (2020), obtained via Synthetic Control."
-layout: post
-permalink: /posts/2021/03/logit-ipp/
+date: '2021-03-26'
+permalink: /posts/2021/03/synth-demo/
 tags:
   - econometrics
-  - replication
   - synthetic control
+  - replication
 ---
 
 In this post, I have two objectives. First, I am going to walk through a
