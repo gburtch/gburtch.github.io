@@ -246,7 +246,7 @@ I’m going to start of implementing a synthetic control estimate
 employing a cross-validated LASSO to identify the best set of control
 districts and their associated weights that minimize prediction error
 for the treated panel’s covid numbers in the pre-treatment period. After
-I do this, I’ll pivot to the traditioanl SCM using the Synth package
+I do this, I’ll pivot to the traditional SCM using the Synth package
 (hold tight).
 
 The first thing we need to do is to pivot the panel from long format to
