@@ -38,7 +38,7 @@ is what SCM implements. It identifies a linear, weighted combination that maps c
 unit outcomes to outcomes in the treated unit, when the treatment
 is not active (i.e., in the pre-treatment period).
 
-What is this exercise really doing then? Simply put, we can think about
+What is this exercise really doing then? We can think about
 this “mapping” exercise as a prediction problem (note: viewed this way,
 we might think of difference-in-differences as an inflexible approach to
 capturing / representing the mapping between treatment and control panels, 
@@ -111,10 +111,10 @@ has been collecting that data and sharing it on a GitHub repository! See
 
 I was then able to locate data for most of the control covariates the
 authors mentioned in their paper, by scouring different German Census
-Data portals (not a fun exercise when you cannot speak German!). In
-particular, I located data on the number of physicians per capita in
-each district, number of pharmacies, number of hospital beds, as well as data 
-on resident volumes by age category, gender and so on.
+Data portals (not a fun exercise when you cannot speak German!). I located data 
+on the number of physicians per capita in each district, number of pharmacies, 
+number of hospital beds, as well as data on resident volumes by age category, 
+gender and so on.
 
 Many, if not most of the covariates are available from
 [DEStatis](https://www.destatis.de/EN/Themes/Countries-Regions/Regional-Statistics/_node.html "DEStatis"),
@@ -135,7 +135,7 @@ to do a good job.)
 I am going to import and integrate the COVID-19 daily cumulative case
 volumes, district names (for labels / interpretation), and a few of the
 district characteristics: physicians per capita, pharmacy
-volumes, and count of individuals by age range. Again, I will ultimately
+volumes, and count of individuals by age range. I will ultimately
 use the latter in my SCM implementation to arrive at a result that looks
 rather similar to that published in the paper. However, using SCUL, as
 you will see, we can do a good job without those features.
@@ -328,7 +328,7 @@ this again, using the Synth package.
 
 With the Synth package, we don’t need to manually pivot the data and
 implement the prediction step. Instead, we employ the provided data
-preparation function, Synth::dataprep(). That said, there are a few
+preparation function, Synth::dataprep(). There are a few
 things we need to do here for the Synth package to run; it seems the
 outcome variable name creates problems, so we rename it to \`Y’. We also
 need to provide a numeric date variable.
@@ -420,7 +420,7 @@ synth.out = synth(dataprep.out)
 
 We can then use the native plotting functions from Synth to visualize
 the result, as follows. These plots rely on the base plotting tools in
-R. Again, the result is essentially the same, except that now we get a
+R. The result is essentially the same, except that now we get a
 weaker treatment effect. I should note here that when I omitted the
 additional predictor covariates in my first pass at this, and the
 resulting synthetic control looked quite poor in the pre period. I then
