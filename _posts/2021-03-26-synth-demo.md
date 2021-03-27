@@ -98,7 +98,7 @@ approximating useful replication materials. The supplementary appendix
 did not include any analysis scripts (despite the authors’ claim to the
 contrary in their paper), and the data that were provided amounted to
 a single spreadsheet, with a handful of time series (certainly not the
-entirety of raw data that was used to construct a synthetic control).
+entirety of raw data that were used to construct a synthetic control).
 Rather than give up, I decided to locate the datasets the authors had
 claimed to have used in their study. After some digging, I was able to
 locate most of the relevant data.
