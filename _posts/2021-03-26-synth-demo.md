@@ -11,8 +11,7 @@ tags:
 In this post, I have two objectives. First, I am going to walk through a
 basic demonstration of the synthetic control method. Second, I am going
 to report a simple replication of the basic results in a recently
-published paper, in the Proceedings of the National Academy of Sciences,
-namely:
+published paper, in the Proceedings of the National Academy of Sciences:
 
 -   Mitze, T., Kosfeld, R., Rode, J., & Wälde, K. (2020). [Face masks
     considerably reduce COVID-19 cases in Germany.](https://www.pnas.org/content/117/51/32293 "Face masks
@@ -97,7 +96,7 @@ requires authors to disclose data and analysis scripts as supplementary
 appendices. Unfortunately, in this case, I was unable to locate anything
 approximating useful replication materials. The supplementary appendix
 did not include any analysis scripts (despite the authors’ claim to the
-contrary in their paper), and the `data’ that was provided amounted to
+contrary in their paper), and the data that were provided amounted to
 a single spreadsheet, with a handful of time series (certainly not the
 entirety of raw data that was used to construct a synthetic control).
 Rather than give up, I decided to locate the datasets the authors had
@@ -135,7 +134,7 @@ to do a good job.)
 
 I am going to import and integrate the COVID-19 daily cumulative case
 volumes, district names (for labels / interpretation), and a few of the
-district characteristics, namely physicians per capita, pharmacy
+district characteristics: physicians per capita, pharmacy
 volumes, and count of individuals by age range. Again, I will ultimately
 use the latter in my SCM implementation to arrive at a result that looks
 rather similar to that published in the paper. However, using SCUL, as
@@ -242,7 +241,7 @@ ggplot(data=DE_Districts %>% filter(NAME_1=="Thüringen")) + geom_sf(aes(fill = 
 
 # Synthetic Control Using LASSO (SCUL)
 
-I’m going to start of implementing a synthetic control estimate
+I’m going to start off implementing a synthetic control estimate
 employing a cross-validated LASSO to identify the best set of control
 districts and their associated weights that minimize prediction error
 for the treated panel’s covid numbers in the pre-treatment period. After
@@ -470,3 +469,5 @@ SCM_plot
 <figure>
 <img src="https://gburtch.github.io/images/SCM-replication_files/figure-gfm/better_synth_plot-1.png" >
 </figure>
+
+... et voila!
