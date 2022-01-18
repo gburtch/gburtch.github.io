@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  18 JAN 2022 15:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  18 JAN 2022 15:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1072,23 +1072,23 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 \fullcolorwidth=\dimen285
 \fullcolorwidth=\dimen286
  [17]
-Underfull \hbox (badness 10000) in paragraph at lines 660--661
+Underfull \hbox (badness 10000) in paragraph at lines 662--663
 
  []
 
 <citations.png, id=253, 327.2225pt x 339.2675pt>
 File: citations.png Graphic file (type png)
 <use citations.png>
-Package pdftex.def Info: citations.png  used on input line 665.
+Package pdftex.def Info: citations.png  used on input line 667.
 (pdftex.def)             Requested size: 139.40474pt x 144.54pt.
 
 AED: lastpage setting LastPage
 [18 <./citations.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 672.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 672.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 674.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 674.
  (./gb_cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 672.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 672.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 674.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 674.
 Package rerunfilecheck Info: File `gb_cv.out' has not changed.
 (rerunfilecheck)             Checksum: EF2B448ECA3C9F7F4697FCC48375D0E4;2987.
  ) 
@@ -1112,7 +1112,7 @@ onts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/typ
 e1/public/lm/lmsso10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
 /lm/lmsso8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10
 .pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on gb_cv.pdf (18 pages, 315058 bytes).
+Output written on gb_cv.pdf (18 pages, 315409 bytes).
 PDF statistics:
  311 PDF objects out of 1000 (max. 8388607)
  277 compressed objects within 3 object streams
