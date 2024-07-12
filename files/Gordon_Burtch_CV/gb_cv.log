@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.1)  20 MAY 2024 22:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.1)  12 JUL 2024 10:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1131,136 +1131,38 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
 \fullcolorwidth=\dimen298
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 143.
-LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 143.
-
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 143.
-
 [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 162.
-
-[2]
-
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 199.
-
-[3]
-
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 224.
-
-[4]
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 250.
-
-[5]
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 291.
-
-[6]
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 334.
-
-[7]
-
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 369.
-
-[8]
-
-LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 397.
-
-[9]
-
-LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 429.
-
-[10]
-
-LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 454.
-
-[11]
-
-LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 495.
-
-[12]
-
-LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 520.
-
-[13]
-
-LaTeX Warning: Reference `LastPage' on page 14 undefined on input line 547.
-
-[14]
-
-LaTeX Warning: Reference `LastPage' on page 15 undefined on input line 573.
-
-[15]
-
-LaTeX Warning: Reference `LastPage' on page 16 undefined on input line 617.
-
-[16]
-
-LaTeX Warning: Reference `LastPage' on page 17 undefined on input line 654.
-
-[17]
+[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
 \fullcolorwidth=\dimen299
 \fullcolorwidth=\dimen300
 
-
-LaTeX Warning: Reference `LastPage' on page 18 undefined on input line 679.
-
-[18]
-
-LaTeX Warning: Reference `LastPage' on page 19 undefined on input line 707.
-
-[19]
+[18] [19] [20]
 \fullcolorwidth=\dimen301
-
-
-LaTeX Warning: Reference `LastPage' on page 20 undefined on input line 745.
-
-[20]
 \fullcolorwidth=\dimen302
 
-Underfull \hbox (badness 10000) in paragraph at lines 765--766
+Underfull \hbox (badness 10000) in paragraph at lines 771--772
 
  []
 
-<citations.jpg, id=203, 309.155pt x 337.26pt>
+<citations.jpg, id=297, 309.155pt x 336.25626pt>
 File: citations.jpg Graphic file (type jpg)
 <use citations.jpg>
-Package pdftex.def Info: citations.jpg  used on input line 770.
-(pdftex.def)             Requested size: 132.49535pt x 144.54pt.
-
-LaTeX Warning: Reference `LastPage' on page 21 undefined on input line 774.
-
+Package pdftex.def Info: citations.jpg  used on input line 776.
+(pdftex.def)             Requested size: 132.89159pt x 144.54pt.
 [21] 
 AED: lastpage setting LastPage
-
-LaTeX Warning: Reference `LastPage' on page 22 undefined on input line 777.
-
 [22 <./citations.jpg>] (./gb_cv.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `gb_cv.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `gb_cv.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  E519934E66A30D00AE5222D633578D27;3206.
+Package rerunfilecheck Info: File `gb_cv.out' has not changed.
+(rerunfilecheck)             Checksum: E519934E66A30D00AE5222D633578D27;3206.
  ) 
 Here is how much of TeX's memory you used:
- 29832 strings out of 478268
- 571542 string characters out of 5846348
- 864396 words of memory out of 5000000
- 47159 multiletter control sequences out of 15000+600000
- 542614 words of font info for 189 fonts, out of 8000000 for 9000
+ 29852 strings out of 478268
+ 571759 string characters out of 5846348
+ 864518 words of memory out of 5000000
+ 47179 multiletter control sequences out of 15000+600000
+ 539881 words of font info for 188 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,14n,94p,1002b,725s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -1280,10 +1182,10 @@ ts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
 /public/lm/lmsso10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/l
 m/lmsso8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.p
 fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on gb_cv.pdf (22 pages, 388991 bytes).
+Output written on gb_cv.pdf (22 pages, 413506 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
- 241 compressed objects within 3 object streams
+ 385 PDF objects out of 1000 (max. 8388607)
+ 333 compressed objects within 4 object streams
  85 named destinations out of 1000 (max. 500000)
- 34328 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 32456 words of extra memory for PDF output out of 35830 (max. 10000000)
 
