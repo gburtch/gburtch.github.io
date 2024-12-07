@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.1)  2 AUG 2024 15:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.1)  6 DEC 2024 19:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1133,34 +1133,35 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
+[18]
 \fullcolorwidth=\dimen297
 \fullcolorwidth=\dimen298
-
-[18] [19] [20]
+ [19] [20]
 \fullcolorwidth=\dimen299
+ [21]
 \fullcolorwidth=\dimen300
 
-Underfull \hbox (badness 10000) in paragraph at lines 774--775
+Underfull \hbox (badness 10000) in paragraph at lines 797--798
 
  []
 
-<citations.jpg, id=298, 309.155pt x 336.25626pt>
+<citations.jpg, id=319, 311.1625pt x 328.22626pt>
 File: citations.jpg Graphic file (type jpg)
 <use citations.jpg>
-Package pdftex.def Info: citations.jpg  used on input line 779.
-(pdftex.def)             Requested size: 132.89159pt x 144.54pt.
-[21] 
+Package pdftex.def Info: citations.jpg  used on input line 802.
+(pdftex.def)             Requested size: 137.02586pt x 144.54pt.
+[22] 
 AED: lastpage setting LastPage
-[22 <./citations.jpg>] (./gb_cv.aux)
+[23 <./citations.jpg>] (./gb_cv.aux)
 Package rerunfilecheck Info: File `gb_cv.out' has not changed.
-(rerunfilecheck)             Checksum: E519934E66A30D00AE5222D633578D27;3206.
+(rerunfilecheck)             Checksum: E65B4A9B29EEF847359A93709F72CF40;3269.
  ) 
 Here is how much of TeX's memory you used:
- 29852 strings out of 478268
- 571751 string characters out of 5846348
+ 29865 strings out of 478268
+ 571860 string characters out of 5846348
  864518 words of memory out of 5000000
  47178 multiletter control sequences out of 15000+600000
- 539881 words of font info for 188 fonts, out of 8000000 for 9000
+ 540118 words of font info for 190 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,14n,94p,1002b,725s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -1180,10 +1181,10 @@ ts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
 /public/lm/lmsso10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/l
 m/lmsso8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.p
 fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on gb_cv.pdf (22 pages, 412605 bytes).
+Output written on gb_cv.pdf (23 pages, 389672 bytes).
 PDF statistics:
- 386 PDF objects out of 1000 (max. 8388607)
- 334 compressed objects within 4 object streams
- 86 named destinations out of 1000 (max. 500000)
+ 408 PDF objects out of 1000 (max. 8388607)
+ 355 compressed objects within 4 object streams
+ 95 named destinations out of 1000 (max. 500000)
  32456 words of extra memory for PDF output out of 35830 (max. 10000000)
 
