@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.1)  31 JAN 2025 15:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.1)  12 MAY 2025 11:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1139,27 +1139,27 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
  [19] [20] [21]
 \fullcolorwidth=\dimen299
 \fullcolorwidth=\dimen300
-
-Underfull \hbox (badness 10000) in paragraph at lines 805--806
+ [22]
+Underfull \hbox (badness 10000) in paragraph at lines 809--810
 
  []
 
-<citations.jpg, id=322, 311.1625pt x 330.23375pt>
+<citations.jpg, id=329, 311.1625pt x 322.20375pt>
 File: citations.jpg Graphic file (type jpg)
 <use citations.jpg>
-Package pdftex.def Info: citations.jpg  used on input line 810.
-(pdftex.def)             Requested size: 136.19498pt x 144.54pt.
-[22] 
+Package pdftex.def Info: citations.jpg  used on input line 814.
+(pdftex.def)             Requested size: 139.58977pt x 144.54pt.
+
 AED: lastpage setting LastPage
 [23 <./citations.jpg>] (./gb_cv.aux)
 Package rerunfilecheck Info: File `gb_cv.out' has not changed.
 (rerunfilecheck)             Checksum: B0D2FF96BF9B283E336A09C8417FBFEE;3269.
  ) 
 Here is how much of TeX's memory you used:
- 29868 strings out of 478268
- 571902 string characters out of 5846348
+ 29873 strings out of 478268
+ 571972 string characters out of 5846348
  864518 words of memory out of 5000000
- 47182 multiletter control sequences out of 15000+600000
+ 47185 multiletter control sequences out of 15000+600000
  539916 words of font info for 188 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,14n,94p,1002b,725s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1180,10 +1180,10 @@ ts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
 /public/lm/lmsso10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/l
 m/lmsso8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.p
 fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on gb_cv.pdf (23 pages, 393631 bytes).
+Output written on gb_cv.pdf (23 pages, 391252 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 359 compressed objects within 4 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 414 PDF objects out of 1000 (max. 8388607)
+ 361 compressed objects within 4 object streams
+ 100 named destinations out of 1000 (max. 500000)
  32456 words of extra memory for PDF output out of 35830 (max. 10000000)
 
