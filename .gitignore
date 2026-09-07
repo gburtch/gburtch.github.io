@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+
+# LaTeX build artifacts (CV is compiled in place in files/Gordon_Burtch_CV/)
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.toc
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*_cache/
