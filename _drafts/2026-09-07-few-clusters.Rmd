@@ -100,7 +100,7 @@ one_sim <- function(G, n = 1000, rho = 0.7, B = 999, seed = 1) {
 
 ## Running it
 
-I run 1000 replications for every cluster count from 2 to 50. That is roughly 49,000 regressions, each with a bootstrap attached, so the work is spread across cores with `future.apply`. On a 16-core laptop it takes about five minutes.
+I run 1000 replications for every cluster count from 2 to 50.
 
 ```{r simulate, cache=TRUE}
 run_sims <- function(G_grid, n_sims = 1000, n = 1000, rho = 0.7, B = 999,
