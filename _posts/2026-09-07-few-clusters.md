@@ -119,7 +119,7 @@ coverage <- sims %>%
 
 ## Vanilla clustering with a sufficiently large number of clusters
 
-Start with $G = 50$. The top panel uses regular OLS standard errors; the bottom uses the vanilla clustered SE. Each point is one simulated dataset’s slope estimate, with its 95% confidence interval. Red points are the ones whose interval misses the true value of 0.5.
+Start with $G = 50$. The top panel uses regular OLS standard errors; the bottom uses the vanilla clustered SE. Each point in the plot reflects one point estimate from a single simulated dataset. Red points are those where the 95% CI does not include the true value of 0.5 I specified in my data-generating process.
 
 ![](/images/few-clusters_files/figure-gfm/g50-1.png)<!-- -->
 
