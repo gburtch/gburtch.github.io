@@ -54,7 +54,7 @@ render_post <- function(input, encoding = "UTF-8", publish = TRUE) {
   # Point figure links at /images/<slug>_files/figure-gfm/.
   # rmarkdown may have made the figure paths absolute (when output_dir != input dir),
   # so replace everything up to and including "<basename>_files/figure-gfm/".
-  md <- gsub(paste0("[^()\\s]*", tools::file_path_sans_ext(basename(input)), "_files/figure-gfm/"),
+  md <- gsub(paste0("[^() ]*", tools::file_path_sans_ext(basename(input)), "_files/figure-gfm/"),
              paste0("/images/", slug, "_files/figure-gfm/"), md)
   writeLines(md, out)
   message("Wrote ", out)
