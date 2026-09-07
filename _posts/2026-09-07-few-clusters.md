@@ -24,7 +24,7 @@ I simulate a bivariate regression $y = 0.1 + 0.5x + e$ with $n = 1000$ observati
 
 $$x_{ig} = x^{(i)}_{ig} + x^{(g)}_{g}, \qquad e_{ig} = e^{(i)}_{ig} + e^{(g)}_{g},$$
 
-where the individual-level pieces are independent normal draws and the cluster-level pieces are shared by everyone in cluster $g$. I set the intra-cluster correlation of the error to $\rho = 0.7$ by giving $e^{(g)}$ variance $\rho$ and $e^{(i)}$ variance $1-\rho$. The cluster component of $x$ matters too: the Moulton inflation factor for the standard error scales with the *product* of the intra-cluster correlations of $x$ and $e$ (and with cluster size), so a clustered error term alone does not do much damage if $x$ varies freely within clusters. Note that $x$ and $e$ are independent, so there is no endogeneity here. The only thing wrong is the dependence structure, and the only thing at stake is inference.
+where the individual-level pieces are independent normal draws and the cluster-level pieces are shared by everyone in cluster $g$. I set the intra-cluster correlation of the error to $\rho = 0.7$ by giving $e^{(g)}$ variance $\rho$ and $e^{(i)}$ variance $1-\rho$. The cluster component of $x$ matters too: the Moulton inflation factor for the standard error scales with the *product* of the intra-cluster correlations of $x$ and $e$ (and with cluster size), so a clustered error term alone does not do much damage if $x$ varies freely within clusters. Note that $x$ and $e$ are independent, so there is no endogeneity here.
 
 ``` r
 suppressPackageStartupMessages({
