@@ -142,7 +142,7 @@ plot_cis <- function(d, title) {
     geom_point(size = 1.1) +
     geom_hline(yintercept = 0.5, linetype = "dashed", color = "chartreuse4") +
     scale_color_manual(values = c(`TRUE` = "blue", `FALSE` = "red"),
-                       labels = c(`TRUE` = "Yes", `FALSE` = "No"), name = "95% CI covers the true slope?") +
+                       labels = c(`TRUE` = "Yes", `FALSE` = "No"), name = "95% CI covers the true beta?") +
     labs(x = "Simulation", y = "Estimate (95% CI)", title = title) +
     theme_post()
 }
