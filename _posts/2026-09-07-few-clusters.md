@@ -127,7 +127,7 @@ With regular standard errors the “95%” interval covers the truth 49.5% of th
 
 ## Six clusters
 
-Now the interesting case. Same design, but $G = 6$ (so each cluster now has about 167 observations). The top panel is the plain clustered sandwich; the bottom is the wild cluster bootstrap.
+What happens when we cut $G$ from 50 to 6? Each cluster now has about 167 observations. The top panel is the plain clustered sandwich; the bottom is the wild cluster bootstrap.
 
 ![](/images/few-clusters_files/figure-gfm/g6-1.png)<!-- -->
 
