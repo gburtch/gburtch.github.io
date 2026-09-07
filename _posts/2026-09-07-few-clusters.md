@@ -121,7 +121,7 @@ coverage <- sims %>%
 
 Start with $G = 50$, which most people would call “enough” clusters. The top panel uses regular OLS standard errors; the bottom uses the plain cluster-robust sandwich. Each point is one simulated dataset’s slope estimate, with its 95% confidence interval. Red points are the ones whose interval misses the true value of 0.5.
 
-![](/Users/gburtch/Documents/GitHub/gburtch.github.io/_posts//images/few-clusters_files/figure-gfm/g50-1.png)<!-- -->
+![](/Users/gburtch/Documents/GitHub/gburtch.github.io/_posts/images/few-clusters_files/figure-gfm/g50-1.png)<!-- -->
 
 With regular standard errors the “95%” interval covers the truth 49.5% of the time. The estimates themselves are unbiased, as they should be; the intervals are simply far too narrow. Clustering fixes most of the problem: coverage rises to 94.9%, a shade under nominal, which is the familiar mild downward bias of the sandwich estimator at moderate $G$.
 
@@ -129,7 +129,7 @@ With regular standard errors the “95%” interval covers the truth 49.5% of th
 
 Now the interesting case. Same design, but $G = 6$ (so each cluster now has about 167 observations). The top panel is the plain clustered sandwich; the bottom is the wild cluster bootstrap.
 
-![](/Users/gburtch/Documents/GitHub/gburtch.github.io/_posts//images/few-clusters_files/figure-gfm/g6-1.png)<!-- -->
+![](/Users/gburtch/Documents/GitHub/gburtch.github.io/_posts/images/few-clusters_files/figure-gfm/g6-1.png)<!-- -->
 
 With six clusters the plain clustered interval covers the truth only 82.9% of the time; regular standard errors are hopeless at 18.8%. The wild cluster bootstrap gets to 93.7%. Its intervals are somewhat wider (median width 0.61 versus 0.45) and more variable in width, which is the price of honesty: with six clusters there simply is not much information about the variance.
 
@@ -137,7 +137,7 @@ With six clusters the plain clustered interval covers the truth only 82.9% of th
 
 Here is the full picture, for every $G$ from 2 to 50 and all five procedures.
 
-![](/Users/gburtch/Documents/GitHub/gburtch.github.io/_posts//images/few-clusters_files/figure-gfm/coverage_plot-1.png)<!-- -->
+![](/Users/gburtch/Documents/GitHub/gburtch.github.io/_posts/images/few-clusters_files/figure-gfm/coverage_plot-1.png)<!-- -->
 
 | G | Regular OLS | Clustered CR1, t(n-k) | Clustered CR1, t(G-1) | Clustered CR2 + Satterthwaite | Wild cluster bootstrap |
 |---:|:---|:---|:---|:---|:---|

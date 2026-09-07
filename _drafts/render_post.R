@@ -52,8 +52,10 @@ render_post <- function(input, encoding = "UTF-8", publish = TRUE) {
   marker <- grep("^# --- render config", md[seq_len(fm_end)])
   if (length(marker)) md <- md[-(marker:(fm_end - 1))]
   # Point figure links at /images/<slug>_files/figure-gfm/.
-  md <- gsub(paste0(tools::file_path_sans_ext(basename(input)), "_files/figure-gfm/"),
-             paste0("/images/", slug, "_files/figure-gfm/"), md, fixed = TRUE)
+  # rmarkdown may have made the figure paths absolute (when output_dir != input dir),
+  # so replace everything up to and including "<basename>_files/figure-gfm/".
+  md <- gsub(paste0("[^()\\s]*", tools::file_path_sans_ext(basename(input)), "_files/figure-gfm/"),
+             paste0("/images/", slug, "_files/figure-gfm/"), md)
   writeLines(md, out)
   message("Wrote ", out)
   invisible(out)
