@@ -123,7 +123,7 @@ Start with $G = 50$. The top panel uses regular OLS standard errors; the bottom 
 
 ![](/images/few-clusters_files/figure-gfm/g50-1.png)<!-- -->
 
-With regular standard errors the “95%” interval covers the truth 49.5% of the time. The estimates themselves are unbiased, as they should be; the intervals are simply far too narrow. Clustering fixes most of the problem: coverage rises to 94.9%, a shade under nominal, which is the familiar mild downward bias of the sandwich estimator at moderate $G$.
+With regular standard errors the “95%” interval covers the truth 49.5% of the time. The estimates themselves are unbiased but the 95% CI is too narrow. Clustering fixes most of the problem: coverage rises to 94.9%.
 
 ## Six clusters
 

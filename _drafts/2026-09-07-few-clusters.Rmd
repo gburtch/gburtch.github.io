@@ -161,7 +161,7 @@ p2 <- plot_cis(filter(d50, method == "Clustered CR1, t(n-k)"),
 (p1 / p2) + plot_layout(guides = "collect") & theme(legend.position = "bottom")
 ```
 
-With regular standard errors the "95%" interval covers the truth `r cv("Regular OLS", 50)` of the time. The estimates themselves are unbiased, as they should be; the intervals are simply far too narrow. Clustering fixes most of the problem: coverage rises to `r cv("Clustered CR1, t(n-k)", 50)`, a shade under nominal, which is the familiar mild downward bias of the sandwich estimator at moderate $G$.
+With regular standard errors the "95%" interval covers the truth `r cv("Regular OLS", 50)` of the time. The estimates themselves are unbiased but the 95% CI is too narrow. Clustering fixes most of the problem: coverage rises to `r cv("Clustered CR1, t(n-k)", 50)`.
 
 ## Six clusters
 
