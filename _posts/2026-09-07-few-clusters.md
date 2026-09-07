@@ -10,7 +10,7 @@ tags:
   - simulation
 ---
 
-Back in April 2021 I posted a [Twitter thread](https://twitter.com/gburtch/status/1378520203689082886) with a small simulation of what happens to cluster-robust standard errors when you only have a handful of clusters. It got passed around more than I expected, and Alexander Fischer (author of the excellent `fwildclusterboot` package) wrote a [nice follow-up](https://s3alfisc.github.io/blog/post/2022-01-29-cluster-robust-inference-when-the-number-of-clusters-is-small-a-horse-race/) that added Satterthwaite-corrected standard errors to the comparison. The thread never made it onto this site, and the original code has aged (it leaned on `multiwayvcov`, which has since left CRAN). So here is an updated version, with the small-sample corrections folded in.
+Back in April 2021 I posted a [Twitter thread](https://twitter.com/gburtch/status/1378520203689082886) with a small simulation of what happens to cluster-robust standard errors when you only have a handful of clusters. It got passed around more than I expected, and Alexander Fischer (author of the excellent `fwildclusterboot` package) wrote a [nice follow-up](https://s3alfisc.github.io/blog/post/2022-01-29-cluster-robust-inference-when-the-number-of-clusters-is-small-a-horse-race/) that added Satterthwaite-corrected standard errors to the comparison. The thread never made it onto this site, and the original code has aged (it used `multiwayvcov`, which has since left CRAN). So here is an updated version, with the small-sample corrections folded in.
 
 ## The problem
 
