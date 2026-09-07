@@ -43,7 +43,7 @@ gen_cluster <- function(n = 1000, G = 50, rho = 0.7, beta = c(0.1, 0.5)) {
 }
 ```
 
-## Five ways to build a 95% confidence interval
+## 4 approaches to constructing cluster SEs
 
 For every simulated dataset I fit `lm(y ~ x)` once and then construct five confidence intervals for the slope:
 
