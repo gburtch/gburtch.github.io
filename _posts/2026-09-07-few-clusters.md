@@ -14,7 +14,7 @@ Back in April 2021 I posted a [Twitter thread](https://twitter.com/gburtch/statu
 
 ## The problem
 
-We cluster standard errors because observations within a group (a state, a firm, a classroom, a subreddit) share unobserved shocks, so regression errors are correlated within the group. Ignore that and you understate your standard errors, sometimes badly ([Moulton, 1986](https://doi.org/10.1016/0304-4076(86)90021-7)). The standard fix is the cluster-robust “sandwich” variance estimator of [Liang and Zeger (1986)](https://doi.org/10.1093/biomet/73.1.13), which is consistent as the number of clusters, $G$, goes to infinity.
+We cluster standard errors because observations within a group (a state, a firm, a classroom, a subreddit) share unobserved shocks, so regression errors are correlated within the group. Ignore that and you understate your standard errors, sometimes badly ([Moulton, 1986](https://doi.org/10.1016/0304-4076(86)90021-7)). The standard fix is the cluster-robust “sandwich” variance estimator of [Liang and Zeger (1986)](https://doi.org/10.1093/biomet/73.1.13) (what I will call vanilla cluster SEs), which is consistent as the number of clusters, $G$, goes to infinity.
 
 The catch is that $G$ is frequently not large. Papers cluster on 50 states, on a dozen regions, or on the six sites of a field experiment. Two questions follow: how badly do clustered standard errors perform when $G$ is small, and what can we do about it? The answer to the second question, at least for the linear model, is well developed: use a better small-sample adjustment ([Bell and McCaffrey, 2002](https://www150.statcan.gc.ca/n1/en/catalogue/12-001-X20020026291); [Imbens and Kolesár, 2016](https://doi.org/10.1162/REST_a_00552); [Pustejovsky and Tipton, 2018](https://doi.org/10.1080/07350015.2016.1247004)) or use the wild cluster bootstrap ([Cameron, Gelbach and Miller, 2008](https://doi.org/10.1162/rest.90.3.414); [Roodman et al., 2019](https://doi.org/10.1177/1536867X19830877)). [MacKinnon, Nielsen and Webb (2023)](https://doi.org/10.1016/j.jeconom.2022.04.001) is a good current guide to all of this. The point of this post is just to *see* it.
 
@@ -48,7 +48,7 @@ gen_cluster <- function(n = 1000, G = 50, rho = 0.7, beta = c(0.1, 0.5)) {
 For every simulated dataset I fit `lm(y ~ x)` once and then construct standard errors using each approach:
 
 1.  **Regular OLS.** The textbook standard error, which assumes independent errors.
-2.  **CR1, $t(n-k)$.** The usual cluster-robust sandwich with Stata’s $\frac{G}{G-1}\frac{n-1}{n-k}$ finite-sample factor, paired with the same critical value OLS would use.
+2.  **CR1, $t(n-k)$.** Vanilla cluster SEs: the cluster-robust sandwich with Stata’s $\frac{G}{G-1}\frac{n-1}{n-k}$ finite-sample factor, paired with the same critical value OLS would use.
 3.  **CR1, $t(G-1)$.** Identical variance estimate, but with critical values from a $t$ distribution with $G-1$ degrees of freedom. This is the default in Stata’s `vce(cluster)` and in R’s `fixest`.
 4.  **CR2 + Satterthwaite.** The bias-reduced CR2 sandwich of Bell and McCaffrey (2002), with Satterthwaite degrees of freedom, via `clubSandwich`.
 5.  **Wild cluster bootstrap.** 999 bootstrap draws imposing the null, via `fwildclusterboot`. I use Rademacher weights, switching to Webb’s six-point weights when $G \le 12$, as Roodman et al. (2019) recommend. The confidence interval is obtained by test inversion.
@@ -119,7 +119,7 @@ coverage <- sims %>%
 
 ## Vanilla clustering with a sufficiently large number of clusters
 
-Start with $G = 50$. The top panel uses regular OLS standard errors; the bottom uses the vanilla clustered SE. Each point in the plot reflects one point estimate from a single simulated dataset. Red points are those where the 95% CI does not include the true value of 0.5 I specified in my data-generating process.
+Start with $G = 50$. The top panel uses regular OLS standard errors; the bottom uses vanilla cluster SEs. Each point in the plot reflects one point estimate from a single simulated dataset. Red points are those where the 95% CI does not include the true value of 0.5 I specified in my data-generating process.
 
 ![](/images/few-clusters_files/figure-gfm/g50-1.png)<!-- -->
 
@@ -127,11 +127,11 @@ With regular standard errors the “95%” interval covers the truth 49.5% of th
 
 ## Six clusters
 
-What happens when we cut $G$ from 50 to 6? Each cluster now has about 167 observations. The top panel is the plain clustered sandwich; the bottom is the wild cluster bootstrap.
+What happens when we cut $G$ from 50 to 6? Each cluster now has about 167 observations. The top panel uses vanilla cluster SEs; the bottom the wild cluster bootstrap.
 
 ![](/images/few-clusters_files/figure-gfm/g6-1.png)<!-- -->
 
-With six clusters the plain clustered interval covers the truth only 82.9% of the time; regular standard errors are hopeless at 18.8%. The wild cluster bootstrap gets to 93.7%. Its intervals are somewhat wider (median width 0.61 versus 0.45) and more variable in width, which is the price of honesty: with six clusters there simply is not much information about the variance.
+With six clusters vanilla cluster SEs cover the truth only 82.9% of the time; regular standard errors are hopeless at 18.8%. The wild cluster bootstrap gets to 93.7%. Its intervals are somewhat wider and more variable in width.
 
 ## Coverage as a function of the number of clusters
 
@@ -158,13 +158,13 @@ Coverage (%) of nominal 95% confidence intervals.
 A few things stand out.
 
 1.  **Regular standard errors get *worse* as clusters get fewer.** With $n$ fixed, fewer clusters means bigger clusters, and the Moulton factor grows with cluster size. At $G = 2$ coverage is 22.8%; even at $G = 50$ it is only 49.5%.
-2.  **The plain clustered sandwich undercovers below 30 or so clusters, and badly below 10.** At $G = 10$ it covers 87.6%; at $G = 5$, 81.5%.
+2.  **Vanilla cluster SEs undercover below 30 or so clusters, and badly below 10.** At $G = 10$ it covers 87.6%; at $G = 5$, 81.5%.
 3.  **Using $t(G-1)$ critical values is free and helps.** Same variance estimate, coverage of 92.2% at $G = 10$ and 90.6% at $G = 5$. If your software does this by default (Stata and `fixest` do), you are already better off than the 2021 thread was.
 4.  **CR2 with Satterthwaite degrees of freedom and the wild cluster bootstrap are both close to nominal down to about five clusters.** At $G = 6$ they cover 96.3% and 93.7% respectively. Alexander’s horse race reached the same conclusion, and there is no strong reason to prefer one over the other in a design this simple. CR2’s cost grows with cluster size (it takes a matrix square root per cluster), the bootstrap’s with the number of draws; the bootstrap generalises more easily to awkward settings (wildly different cluster sizes, few *treated* clusters, and so on; see [MacKinnon and Webb, 2017](https://doi.org/10.1002/jae.2508), and MacKinnon, Nielsen and Webb, 2023).
 5.  **Below five clusters, the picture is erratic and no procedure is comfortable.** With two clusters the wild bootstrap fails to return an interval at all in 60% of replications (Webb weights give only $6^G = 36$ distinct draws) and covers 70.9% when it does. CR2 with Satterthwaite goes the other way: the degrees of freedom collapse toward one, the median interval is 1.04 wide (the slope is 0.5), and coverage is 99.7%. At three and four clusters the corrections are back in the neighbourhood of nominal, but with intervals two to four times as wide as at ten clusters. None of that is a defect of the methods. Two or three clusters means two or three independent observations of the cluster-level shock, and an honest procedure will tell you so, either by failing or by handing you an interval that spans everything.
 
 ## Takeaways
 
-If you cluster, know how many clusters you have. Above 40 or 50, the usual sandwich is fine. Between roughly 10 and 40, at minimum use $t(G-1)$ critical values, and preferably CR2 or the wild cluster bootstrap. Below 10, use CR2 or the bootstrap and report the interval, not just the stars. And below five, be honest with yourself and your readers that the data cannot tell you much about sampling variability at the cluster level.
+If you cluster, know how many clusters you have. Above 40 or 50, vanilla cluster SEs are fine. Between roughly 10 and 40, at minimum use $t(G-1)$ critical values, and preferably CR2 or the wild cluster bootstrap. Below 10, use CR2 or the bootstrap and report the interval, not just the stars. And below five, be honest with yourself and your readers that the data cannot tell you much about sampling variability at the cluster level.
 
 The original 2021 code is archived in [this repository](https://github.com/gburtch/simulating_cluster_SEs); the version above supersedes it. Alexander Fischer’s extended simulations, including unbalanced cluster sizes and the few-treated-clusters case, are in his [`clusteredErrorsSims`](https://github.com/s3alfisc/clusteredErrorsSims) package.
