@@ -167,4 +167,4 @@ A few things stand out.
 
 If you cluster, know how many clusters you have. Above 40 or 50, vanilla cluster SEs are fine. Between roughly 10 and 40, at minimum use $t(G-1)$ critical values, and preferably CR2 or the wild cluster bootstrap. Below 10, use CR2 or the bootstrap and report the interval, not just the stars. And below five, be honest with yourself and your readers that the data cannot tell you much about sampling variability at the cluster level.
 
-The original 2021 code is archived in [this repository](https://github.com/gburtch/simulating_cluster_SEs); the version above supersedes it. Alexander Fischer’s extended simulations, including unbalanced cluster sizes and the few-treated-clusters case, are in his [`clusteredErrorsSims`](https://github.com/s3alfisc/clusteredErrorsSims) package.
+The original 2021 code is archived in [this repository](https://github.com/gburtch/simulating_cluster_SEs); the version above supersedes it.
