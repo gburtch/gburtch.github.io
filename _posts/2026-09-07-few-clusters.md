@@ -48,7 +48,7 @@ gen_cluster <- function(n = 1000, G = 50, rho = 0.7, beta = c(0.1, 0.5)) {
 For every simulated dataset I fit `lm(y ~ x)` once and then construct standard errors using each approach:
 
 1.  **Regular OLS.** The textbook standard error, which assumes independent errors.
-2.  **CR1, $t(n-k)$.** Vanilla cluster SEs: the cluster-robust sandwich with Stata’s $\frac{G}{G-1}\frac{n-1}{n-k}$ finite-sample factor, paired with the same critical value OLS would use.
+2.  **CR1, $t(n-k)$.** Vanilla cluster SEs: the cluster-robust sandwich with Stata’s $\frac{G}{G-1}\frac{n-1}{n-k}$ finite-sample factor, paired with the same critical value OLS would use. This is what R’s `sandwich::vcovCL()` followed by `lmtest::coeftest()` gives you by default.
 3.  **CR1, $t(G-1)$.** Identical variance estimate, but with critical values from a $t$ distribution with $G-1$ degrees of freedom. This is the default in Stata’s `vce(cluster)` and in R’s `fixest`.
 4.  **CR2 + Satterthwaite.** The bias-reduced CR2 sandwich of Bell and McCaffrey (2002), with Satterthwaite degrees of freedom, via `clubSandwich`.
 5.  **Wild cluster bootstrap.** 999 bootstrap draws imposing the null, via `fwildclusterboot`. I use Rademacher weights, switching to Webb’s six-point weights when $G \le 12$, as Roodman et al. (2019) recommend. The confidence interval is obtained by test inversion.
@@ -107,7 +107,7 @@ run_sims <- function(G_grid, n_sims = 1000, n = 1000, rho = 0.7, B = 999,
 sims <- run_sims(G_grid = 2:50) %>%
   mutate(covered = lo <= 0.5 & hi >= 0.5,
          method = factor(method, levels = c("regular", "cr1_t_n", "cr1_t_g", "cr2_satt", "wild"),
-                         labels = c("Regular OLS", "Clustered CR1, t(n-k)", "Clustered CR1, t(G-1)",
+                         labels = c("Regular OLS", "CR1, t(n-k): R sandwich + coeftest default", "CR1, t(G-1): Stata / R fixest default",
                                     "Clustered CR2 + Satterthwaite", "Wild cluster bootstrap")))
 
 coverage <- sims %>%
@@ -139,7 +139,7 @@ Here is the full picture, for every $G$ from 2 to 50 and all five procedures.
 
 ![](/images/few-clusters_files/figure-gfm/coverage_plot-1.png)<!-- -->
 
-| G | Regular OLS | Clustered CR1, t(n-k) | Clustered CR1, t(G-1) | Clustered CR2 + Satterthwaite | Wild cluster bootstrap |
+| G | Regular OLS | CR1, t(n-k): R sandwich + coeftest default | CR1, t(G-1): Stata / R fixest default | Clustered CR2 + Satterthwaite | Wild cluster bootstrap |
 |---:|:---|:---|:---|:---|:---|
 | 2 | 22.8 | 13.9 | 48.4 | 99.7 | 70.9 |
 | 3 | 18.0 | 61.1 | 96.5 | 99.8 | 95.3 |
